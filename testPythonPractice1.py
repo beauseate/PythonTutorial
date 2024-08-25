@@ -9,9 +9,9 @@ def test(got, expected):
     print ('%s got: %s expected: %s' % (prefix, repr(got), repr(expected)))
 
 def main():
-    check_test_is_odd_number = False
-    check_has_lowercase = False
-    check_fizz_buzz = False
+    check_test_is_odd_number = True
+    check_has_lowercase = True
+    check_fizz_buzz = True
 
     if check_test_is_odd_number:
         print("---------------------------------------------------------")
@@ -24,26 +24,26 @@ def main():
         test(is_odd_number(101), True)
 
     if check_has_lowercase:
-            print("---------------------------------------------------------")
-            print('Testing has_lower_case:')
-            test(has_lowercase("i am a strinG"), True)
-            test(has_lowercase("no upper case here"), True)
-            test(has_lowercase("I Have Multiple Lower Case Chars"), True)
-            test(has_lowercase("HELLO"), False)
-            test(has_lowercase("I start with an UPPER CASE CHAR"), True)
-            test(has_lowercase("ALL UPPER CASE"), False)
-            test(has_lowercase(" "), False)
-            test(has_lowercase("M"), False)
-            test(has_lowercase("o"), True)
-            test(has_lowercase("Hello"), True)
-            test(has_lowercase("gOODBYE"), True)
-            test(has_lowercase("001101"), False)
-            test(has_lowercase("2 b or not 2 B"), True)
-            test(has_lowercase("2 DO OR NOT 2 DO"), False)
+        print("---------------------------------------------------------")
+        print('Testing has_lower_case():')
+        test(has_lowercase("i am a strinG"), True)
+        test(has_lowercase("no upper case here"), True)
+        test(has_lowercase("I Have Multiple Lower Case Chars"), True)
+        test(has_lowercase("HELLO"), False)
+        test(has_lowercase("I start with an UPPER CASE CHAR"), True)
+        test(has_lowercase("ALL UPPER CASE"), False)
+        test(has_lowercase(" "), False)
+        test(has_lowercase("M"), False)
+        test(has_lowercase("o"), True)
+        test(has_lowercase("Hello"), True)
+        test(has_lowercase("gOODBYE"), True)
+        test(has_lowercase("001101"), False)
+        test(has_lowercase("2 b or not 2 B"), True)
+        test(has_lowercase("2 DO OR NOT 2 DO"), False)
 
     if check_fizz_buzz:
         print("-------------------------------------------------------")
-        print('Testing fizz_buzz')
+        print('Testing fizz_buzz():')
         test(fizz_buzz(6),"Fizz")
         test(fizz_buzz(45),"FizzBuzz")
         test(fizz_buzz(2),"2")
